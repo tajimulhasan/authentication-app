@@ -1,8 +1,9 @@
+import Signup from "./signup";
 
 export default function Home() {
   return (
-    <>
-      <div></div>
-    </>
+    <div>
+     <Signup />
+    </div>
   );
 }
