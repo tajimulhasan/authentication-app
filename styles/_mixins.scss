@@ -1,0 +1,104 @@
+@mixin breakpoint($device) {
+  @if $device ==small-mobile {
+    @media (max-width: 370px) {
+      @content;
+    }
+  }
+
+  @if $device ==mobile {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+
+  @if $device ==tablet {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @if $device ==mobile-landscape {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @else if $device ==tab-up {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $device ==tab-landscape-up {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $device ==desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $device ==large-display-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+
+  @else if $device ==menu-fix {
+    @media only screen and (max-width: 1400px) and (min-width: 991.98px) {
+      @content;
+    }
+  }
+}
+
+@mixin box-shadow($level) {
+  @if $level ==level-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.16);
+  }
+
+  @if $level ==level-1-1 {
+    box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.16);
+  }
+
+  @if $level ==level-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @if $level ==level-3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 6px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @if $level ==level-4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.16);
+  }
+
+  @if $level ==level-5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.09), 0 15px 12px rgba(0, 0, 0, 0.16);
+  }
+
+  @if $level ==level-6 {
+    box-shadow: 0 20px 100px -5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@mixin text-variant($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin linear-gradient($color1, $color2) {
+  background: $color1;
+  background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
+  background: -webkit-gradient(left top,
+      right top,
+      color-stop(0%, $color1),
+      color-stop(100%, $color2));
+  background: -webkit-linear-gradient(left, $color1 0%, $color2 100%);
+  background: -o-linear-gradient(left, $color1 0%, $color2 100%);
+  background: -ms-linear-gradient(left, $color1 0%, $color2 100%);
+  background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
