@@ -1,71 +1,69 @@
 @import "/styles/variables";
 
-.wrapper{
-    display: grid;
-    place-items: center;
-    height: 100vh;
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
-.container{
-    width:730px;
-    height: 460px;
-    position: relative;
-    background-color: $primary;
-    box-shadow: var(--boxShadowForMainContainer);
-    border-radius: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem 2rem;
-    font-family: var(--$primary-font);
-    background-repeat: no-repeat;
-    overflow: hidden;
+.container {
+  width: 730px;
+  height: 460px;
+  position: relative;
+  background-color: $primary;
+  box-shadow: var(--boxShadowForMainContainer);
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem;
+  font-family: var(--$primary-font);
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
-.bgLayer{
-    position: absolute;
-    background-color: $secondary;
-}
-
-.welcomeText{
-    width: 280px;
-    color: $primary;
-}
-.welcomeText :nth-child(1){
-    text-transform: uppercase;
-    font-size: 33px;
-    font-weight: 700;
+.bgLayer {
+  position: absolute;
+  background-color: $secondary;
 }
 
-.inputContainer{
- width: 45%;
+.welcomeText {
+  width: 280px;
+  color: $primary;
+}
+.welcomeText :nth-child(1) {
+  text-transform: uppercase;
+  font-size: 33px;
+  font-weight: 700;
+}
 
-.tag :nth-child(1){
+.inputContainer {
+  width: 45%;
+
+  .tag :nth-child(1) {
     font-size: 28px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 2px;
-}
-.tag :nth-child(2){
+  }
+  .tag :nth-child(2) {
     margin: 0px auto;
     height: 5px;
     width: 2.6rem;
     background-color: $secondary;
     border-radius: 33px;
     overflow: auto;
-}
-
-}
-
-  .inputField{
-     margin-top: 2rem;
-     padding-left: 12px;
   }
-
-.submitButton{
-text-align: center;
-}
-.button{
-    width: 100%;
-    background-color: $secondary;
-    margin-top: 1rem;
 }
 
+.inputField {
+  margin-top: 2rem;
+  padding-left: 12px;
+}
+
+.submitButton {
+  text-align: center;
+}
+.button {
+  width: 100%;
+  background-color: $secondary;
+  margin-top: 1rem;
+}
