@@ -9,20 +9,55 @@ const Login = () => {
   useEffect(() => {
     gsap.fromTo(
       `.${styles.welcomeText}`,
-      { opacity: 0, x: 40, filter: "blur(4px)" },
-      { opacity: 1, x: 0, delay: 0.5, filter: "blur(0px)", duration: 1 }
+      { opacity: 0, x: 50, filter: "blur(5px)" },
+      { opacity: 1, x: 0, delay: 0.8, filter: "blur(0px)", duration: 0.8  }
     );
+
     gsap.fromTo(
       `.${styles.inputContainer}`,
-      { opacity: 0, x: -50, filter: "blur(4px)" },
-      { opacity: 1, x: 0, delay: 0.5, filter: "blur(0px)", duration: 1 }
+      { opacity: 0, x: -50, filter: "blur(5px)" },
+      { opacity: 1, x: 0, delay: 0.8, filter: "blur(0px)", duration: 0.8 }
     );
+
+    gsap.fromTo(
+      `.${styles.bgLayerRight}`,
+      {
+        opacity: 1,
+        rotation: 0,
+        width: "1500px",
+        height: "1100px",
+        bottom: 0,
+        right: 0,
+        
+        },
+      {
+        opacity: 1,
+        rotation: 55,
+        bottom: "-309px",
+        right: "-1100px",
+        duration: 1.2,
+      }
+    );
+    
+    return () => {
+      gsap.to(`.${styles.bgLayerRight}`, {
+        opacity: 1,
+        rotation: 0,
+        width: "1500px",
+        height: "1100px",
+        bottom: 0,
+        right: 0,
+        duration: 1.2,
+      });
+    };
+
   }, []);
 
   return (
     <>
       <div className={styles.wrapper}>
         <div className={styles.container}>
+        <div className={styles.bgLayerRight}></div>
           <div className={styles.inputContainer}>
             <div className={styles.tag}>
               <p>Login</p>
@@ -51,16 +86,12 @@ const Login = () => {
                   />
                 </Form.Group>
                 <Button className={classNames(styles.button, "rounded-pill")}>
-                  Sign Up
+                  Login
                 </Button>
               </Form>
             </div>
             <p className="mt-3 text-center mb-0">
-              Do not have an account?{" "}
-              <Link href="/">
-                <span className="text-decoration-none">Sign Up</span>
-              </Link>
-            </p>
+              Do not have an account? <Link href="/signup">Sign Up</Link></p>
           </div>
           <div className={styles.welcomeText}>
             <p>Welcome Back!</p>
