@@ -5,40 +5,39 @@
 @import "./overrides";
 
 :root {
-    --primary: #{$primary};
-    --secondary: #{$secondary};
-    --text: #{$text};
-    --border: #{$border};
-    --fill: #{$fill};
-    --danger: #{$danger};
-    --primary-font: #{$primary-font};
-    --title-font: #{$title-font};
-    --placeholder: #{$placeholder};
- --boxShadowForMainContainer:  rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --text: #{$text};
+  --border: #{$border};
+  --fill: #{$fill};
+  --danger: #{$danger};
+  --primary-font: #{$primary-font};
+  --title-font: #{$title-font};
+  --placeholder: #{$placeholder};
+  --boxShadowForMainContainer: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 html,
 body {
-    background-color: var(--fill);
-    padding: 0;
-    margin: 0;
-    font-family: var(--primary-font);
+  background-color: var(--fill);
+  padding: 0;
+  margin: 0;
+  font-family: var(--primary-font);
 }
 
 @font-face {
-    font-family: 'GeistMonoVF';
-    src: url('../src/pages/fonts/GeistMonoVF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "GeistMonoVF";
+  src: url("../src/pages/fonts/GeistMonoVF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'GeistVF';
-    src: url('../src/pages/fonts/GeistVF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
+@font-face {
+  font-family: "GeistVF";
+  src: url("../src/pages/fonts/GeistVF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 //     color: var(--text);
 //     font-size: 1.125rem;
@@ -83,7 +82,6 @@ body {
 //     &.ghost {
 //         background-color: var(--fill);
 //     }
-
 
 //     &.dark {
 //         background-color: var(--text);
