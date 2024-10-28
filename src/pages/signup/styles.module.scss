@@ -9,17 +9,20 @@
     width:730px;
     height: 460px;
     background-color: $primary;
+    background-image: url('../../images/Vector1.png');
     box-shadow: var(--boxShadowForMainContainer);
-    color: $secondary;
     border-radius: 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem 2rem;
     font-family: var(--$primary-font);
+    background-repeat: no-repeat;
 }
+
 .welcomeText{
     width: 280px;
+    color: $primary;
 }
 .welcomeText :nth-child(1){
     text-transform: uppercase;
@@ -42,6 +45,7 @@
     width: 2.6rem;
     background-color: $secondary;
     border-radius: 33px;
+    overflow: auto;
 }
 
 }

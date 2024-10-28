@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/gsap": "^3.0.0",
     "bootstrap": "^5.3.3",
     "classnames": "^2.5.1",
+    "gsap": "^3.12.5",
     "next": "15.0.1",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-bootstrap": "^2.10.5",

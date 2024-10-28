@@ -1,19 +1,38 @@
+import classNames from "classnames";
+import gsap from "gsap";
+import Link from "next/link";
+import { useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import styles from "./styles.module.scss";
-import classNames from "classnames";
-import Link from "next/link";
 
 const Signup = () => {
+
+  useEffect(() => {
+      gsap.fromTo(
+        `.${styles.welcomeText}`,
+        { opacity: 0, x: -40, filter: "blur(4px)" }, 
+        { opacity: 1, x: 0, delay: 0.5, filter: "blur(0px)", duration: 1 }
+      )
+      gsap.fromTo(
+        `.${styles.inputContainer}`,
+        { opacity: 0, x: 50, filter: "blur(4px)" }, 
+        { opacity: 1, x: 0, delay: 0.5, filter: "blur(0px)", duration: 1 }
+      )
+    
+  }, []);
+  
   return (
     <>
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <div className={styles.welcomeText}>
+          <div
+           className={styles.welcomeText}>
             <p>Welcome Back!</p>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-              quo tempore voluptas maxime molestias, quia deserunt ut repellat
-              eveniet sapiente?
+            Lorem ipsum dolor, sit amet <br /> 
+            consectetur adipisicing <br />
+             elit. Minima commodi <br />
+             sed do eiusmod
             </p>
           </div>
           <div className={styles.inputContainer}>
@@ -47,7 +66,7 @@ const Signup = () => {
               <Button className={classNames(styles.button, "rounded-pill")}>Sign Up</Button>
             </Form>
            </div>
-           <p className="mt-3 text-center mb-0">Already have an account? <Link href="/">Login</Link></p>
+           <p className="mt-3 text-center mb-0 ps-2">Already have an account? <Link href="/login">Login</Link></p>
           </div>
         </div>
       </div>
