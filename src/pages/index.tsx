@@ -9,17 +9,17 @@ export default function Home() {
       <div className={styles.card1}>
         <p className="mb-4">
           You are not logged in! <br />
-          please login
+          please login..
         </p>
         <p>
           Already have an account?{" "}
-          <a href="/login" className="text-decoration-none text-white">
+          <Link href="/login">
             <Button variant="dark">Login</Button>
-          </a>
+          </Link>
         </p>
         <p>
           Do not have an account?{" "}
-          <Link href="/signup" className="text-decoration-none text-white">
+          <Link href="/signup">
             <Button variant="dark">Sign Up</Button>
           </Link>
         </p>
