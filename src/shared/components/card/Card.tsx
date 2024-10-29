@@ -7,7 +7,7 @@ import styles from "./card.module.scss";
 interface ICard {
     children: ReactNode;
     isRoundedBorder?: boolean;
-    backgroundColor: CARD_BG;
+    backgroundColor?: CARD_BG;
 }
 
 const Card = (props: ICard) => {
@@ -20,7 +20,7 @@ const Card = (props: ICard) => {
     }
 
     return (
-        <div className={classNames(styles.card, getBgClass[backgroundColor], { [styles.borderRounded]: isRoundedBorder, })}>
+        <div className={classNames(styles.card, backgroundColor && getBgClass[backgroundColor], { [styles.borderRounded]: isRoundedBorder, })}>
             {children}
         </div >
     );
