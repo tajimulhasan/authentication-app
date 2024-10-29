@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import gsap from "gsap";
+import Link from 'next/link';
 import classNames from "classnames";
 import { Button, Form } from "react-bootstrap";
 import { AUTH_PAGE_TYPE } from '@/shared/enums';
 
 import styles from "./authMainView.module.scss";
-import Link from 'next/link';
 
 interface IAuthMainView {
     authPageType: AUTH_PAGE_TYPE;
