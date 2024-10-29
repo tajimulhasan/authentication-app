@@ -5,6 +5,7 @@
   place-items: center;
   height: 100vh;
 }
+
 .container {
   width: 730px;
   height: 460px;
@@ -21,23 +22,28 @@
   font-family: var(--$primary-font);
   overflow: hidden;
 }
+
 .bgLayerRight {
   position: absolute;
   background-color: $secondary;
 }
+
 .welcomeText {
   width: 280px;
   color: $primary;
 }
+
 .welcomeText p:nth-child(1) {
   text-transform: uppercase;
   font-size: 33px;
   font-weight: 700;
   text-align: end;
 }
+
 .textIndentation {
   text-align: end;
 }
+
 .textIndentation span {
   display: block;
 }
@@ -51,6 +57,7 @@
     text-align: center;
     margin-bottom: 2px;
   }
+
   .tag :nth-child(2) {
     margin: 0px auto;
     height: 5px;
@@ -69,6 +76,7 @@
 .submitButton {
   text-align: center;
 }
+
 .button {
   width: 100%;
   background-color: $secondary;
