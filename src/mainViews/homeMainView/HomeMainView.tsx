@@ -10,7 +10,7 @@ const HomeMainView = () => {
         <section>
             <Container>
                 <Col xs={12} md={8} lg={4} className='mx-auto'>
-                    <Card>
+                    <Card backgroundColor='secondary'>
                         <p className="mb-4">
                             You are not logged in! <br />
                             please login..
