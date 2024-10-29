@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Button } from "react-bootstrap";
 
 import styles from "./homeMainView.module.scss";
+import Card from '@/shared/components/card/Card';
 
 const HomeMainView = () => {
     return (
         <div>
-            <div className={styles.card1}>
+            <Card>
                 <p className="mb-4">
                     You are not logged in! <br />
                     please login..
@@ -24,7 +25,7 @@ const HomeMainView = () => {
                         <Button variant="dark">Sign Up</Button>
                     </Link>
                 </p>
-            </div>
+            </Card>
         </div>
     );
 };
