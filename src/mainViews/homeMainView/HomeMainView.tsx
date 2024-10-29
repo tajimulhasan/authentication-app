@@ -2,9 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import { Button, Col, Container } from "react-bootstrap";
 
-import { CARD_BG } from '@/shared/enums';
 import Card from '@/shared/components/card/Card';
-import styles from "./homeMainView.module.scss";
 
 const HomeMainView = () => {
     return (
