@@ -69,30 +69,30 @@ body {
 //     }
 // }
 
-// section {
-//     padding-top: 30px;
-//     padding-bottom: 30px;
-//     position: relative;
+section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
 
-//     @include breakpoint(tab-up) {
-//         padding-top: 60px;
-//         padding-bottom: 60px;
-//     }
+    @include breakpoint(tab-up) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
-//     &.ghost {
-//         background-color: var(--fill);
-//     }
+    &.ghost {
+        background-color: var(--fill);
+    }
 
-//     &.dark {
-//         background-color: var(--text);
-//         color: $white;
-//     }
+    &.dark {
+        background-color: var(--text);
+        color: $white;
+    }
 
-//     &.gradient {
-//         background: rgb(2, 0, 36);
-//         background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-//     }
-// }
+    &.gradient {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    }
+}
 
 // * {
 //     box-sizing: border-box;
