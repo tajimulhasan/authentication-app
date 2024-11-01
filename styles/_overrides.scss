@@ -1,2 +1,33 @@
 @import "styles/variables";
 @import "styles/mixins";
+
+.auth-tag :nth-child(1) {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.auth-tag :nth-child(2) {
+    margin: 0px auto;
+    height: 5px;
+    width: 2.6rem;
+    background-color: $secondary;
+    border-radius: 33px;
+    overflow: auto;
+}
+
+.auth-input-field {
+    margin-top: 2rem;
+    padding-left: 12px;
+}
+
+.auth-submitButton {
+    text-align: center;
+}
+
+.auth-button {
+    width: 100%;
+    background-color: $secondary;
+    margin-top: 1rem;
+}

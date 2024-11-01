@@ -57,34 +57,4 @@
 .inputContainer {
     width: 45%;
 
-    .tag :nth-child(1) {
-        font-size: 28px;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 2px;
-    }
-
-    .tag :nth-child(2) {
-        margin: 0px auto;
-        height: 5px;
-        width: 2.6rem;
-        background-color: $secondary;
-        border-radius: 33px;
-        overflow: auto;
-    }
-}
-
-.inputField {
-    margin-top: 2rem;
-    padding-left: 12px;
-}
-
-.submitButton {
-    text-align: center;
-}
-
-.button {
-    width: 100%;
-    background-color: $secondary;
-    margin-top: 1rem;
 }

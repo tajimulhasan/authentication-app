@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import gsap from "gsap";
-import Link from 'next/link';
 import classNames from "classnames";
-import { Button, Form } from "react-bootstrap";
-import { AUTH_PAGE_TYPE } from '@/shared/enums';
 
+import { AUTH_PAGE_TYPE } from '@/shared/enums';
+import Login from '@/shared/components/login/Login';
+import Signup from '@/shared/components/signup/Signup';
 import styles from "./authMainView.module.scss";
 
 interface IWelcomeText {
@@ -100,7 +100,6 @@ const AuthMainView = (props: IAuthMainView) => {
         )
     }
 
-
     if (authPageType == AUTH_PAGE_TYPE.SIGNUP) {
         return (
             <div className={styles.wrapper}>
@@ -111,47 +110,7 @@ const AuthMainView = (props: IAuthMainView) => {
                         description='Lorem ipsum dolor, sit amet <br />consectetur adipisicing <br />elit. Minima commodi <br />sed do eiusmod'
                     />
                     <div className={styles.inputContainer}>
-                        <div className={styles.tag}>
-                            <p>Sign Up</p>
-                            <p></p>
-                        </div>
-                        <div className={styles.inputField}>
-                            <Form>
-                                <Form.Group
-                                    className="mb-1"
-                                    controlId="exampleForm.ControlInput1"
-                                >
-                                    <Form.Label>Username</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter your name" />
-                                </Form.Group>
-                                <Form.Group
-                                    className="mb-1"
-                                    controlId="exampleForm.ControlInput1"
-                                >
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control
-                                        type="email"
-                                        placeholder="Enter your email address"
-                                    />
-                                </Form.Group>
-                                <Form.Group
-                                    className="mb-1"
-                                    controlId="exampleForm.ControlInput1"
-                                >
-                                    <Form.Label>password</Form.Label>
-                                    <Form.Control
-                                        type="password"
-                                        placeholder="Enter your password"
-                                    />
-                                </Form.Group>
-                                <Button className={classNames(styles.button, "rounded-pill")}>
-                                    Sign Up
-                                </Button>
-                            </Form>
-                        </div>
-                        <p className="mt-3 text-center mb-0 ps-2">
-                            Already have an account? <Link href="/login">Login</Link>
-                        </p>
+                        <Signup />
                     </div>
                 </div>
             </div>
@@ -165,40 +124,7 @@ const AuthMainView = (props: IAuthMainView) => {
                 <div className={styles.container}>
                     <div className={getByLayerClass[authPageType]}></div>
                     <div className={styles.inputContainer}>
-                        <div className={styles.tag}>
-                            <p>Login</p>
-                            <p></p>
-                        </div>
-                        <div className={styles.inputField}>
-                            <Form>
-                                <Form.Group
-                                    className="mb-1"
-                                    controlId="exampleForm.ControlInput1"
-                                >
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control
-                                        type="email"
-                                        placeholder="Enter your email address"
-                                    />
-                                </Form.Group>
-                                <Form.Group
-                                    className="mb-1"
-                                    controlId="exampleForm.ControlInput1"
-                                >
-                                    <Form.Label>password</Form.Label>
-                                    <Form.Control
-                                        type="password"
-                                        placeholder="Enter your password"
-                                    />
-                                </Form.Group>
-                                <Button className={classNames(styles.button, "rounded-pill")}>
-                                    Login
-                                </Button>
-                            </Form>
-                        </div>
-                        <p className="mt-3 text-center mb-0">
-                            Do not have an account? <Link href="/signup">Sign Up</Link>
-                        </p>
+                        <Login />
                     </div>
                     <WelcomeText
                         title='Login Page!'
