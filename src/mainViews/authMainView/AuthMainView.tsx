@@ -3,9 +3,8 @@ import gsap from "gsap";
 import classNames from "classnames";
 
 import { AUTH_PAGE_TYPE } from '@/shared/enums';
-import Login from '@/shared/components/login/Login';
-import Signup from '@/shared/components/signup/Signup';
 import AuthCard from '@/shared/components/authCard/AuthCard';
+import AuthForm from '@/shared/components/authForm/AuthForm';
 import styles from "./authMainView.module.scss";
 
 interface IInputContainerWrapper {
@@ -122,7 +121,7 @@ const AuthMainView = (props: IAuthMainView) => {
                         description='Lorem ipsum dolor, sit amet <br />consectetur adipisicing <br />elit. Minima commodi <br />sed do eiusmod'
                     />
                     <InputContainerWrapper>
-                        <Signup />
+                        <AuthForm authFormType={authPageType} />
                     </InputContainerWrapper>
                 </AuthCard>
             </div>
@@ -135,7 +134,7 @@ const AuthMainView = (props: IAuthMainView) => {
                 <AuthCard>
                     <div className={getByLayerClass[authPageType]}></div>
                     <InputContainerWrapper>
-                        <Login />
+                        <AuthForm authFormType={authPageType} />
                     </InputContainerWrapper>
                     <WelcomeText
                         title='Login Page!'
