@@ -7,6 +7,12 @@ import { AUTH_PAGE_TYPE } from '@/shared/enums';
 
 import styles from "./authMainView.module.scss";
 
+interface IWelcomeText {
+    title: string;
+    description: string;
+    isLoginWelcome?: boolean;
+}
+
 interface IAuthMainView {
     authPageType: AUTH_PAGE_TYPE;
 }
@@ -85,21 +91,25 @@ const AuthMainView = (props: IAuthMainView) => {
         };
     }, []);
 
+    const WelcomeText: React.FC<IWelcomeText> = ({ title, description, isLoginWelcome }) => {
+        return (
+            <div className={classNames(styles.welcomeText, { [styles.rightAlign]: isLoginWelcome })}>
+                <p>{title}</p>
+                <p dangerouslySetInnerHTML={{ __html: description }} />
+            </div>
+        )
+    }
+
 
     if (authPageType == AUTH_PAGE_TYPE.SIGNUP) {
         return (
             <div className={styles.wrapper}>
                 <div className={styles.container}>
                     <div className={getByLayerClass[authPageType]}></div>
-                    <div className={styles.welcomeText}>
-                        <p>Welcome Back!</p>
-                        <p>
-                            Lorem ipsum dolor, sit amet <br />
-                            consectetur adipisicing <br />
-                            elit. Minima commodi <br />
-                            sed do eiusmod
-                        </p>
-                    </div>
+                    <WelcomeText
+                        title='Signup page'
+                        description='Lorem ipsum dolor, sit amet <br />consectetur adipisicing <br />elit. Minima commodi <br />sed do eiusmod'
+                    />
                     <div className={styles.inputContainer}>
                         <div className={styles.tag}>
                             <p>Sign Up</p>
@@ -190,15 +200,11 @@ const AuthMainView = (props: IAuthMainView) => {
                             Do not have an account? <Link href="/signup">Sign Up</Link>
                         </p>
                     </div>
-                    <div className={styles.welcomeText}>
-                        <p>Welcome Back!</p>
-                        <p className={styles.textIndentation}>
-                            <span>Lorem ipsum dolor, sit amet</span>
-                            <span>consectetur adipisicing</span>
-                            <span>elit Minima commodi</span>
-                            <span>sed do eiusmod</span>
-                        </p>
-                    </div>
+                    <WelcomeText
+                        title='Login Page!'
+                        description='Lorem ipsum dolor, sit amet <br />consectetur adipisicing <br />elit. Minima commodi <br />sed do eiusmod'
+                        isLoginWelcome
+                    />
                 </div>
             </div>
         );
