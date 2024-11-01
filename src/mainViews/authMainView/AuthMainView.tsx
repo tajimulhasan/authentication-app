@@ -5,8 +5,12 @@ import classNames from "classnames";
 import { AUTH_PAGE_TYPE } from '@/shared/enums';
 import Login from '@/shared/components/login/Login';
 import Signup from '@/shared/components/signup/Signup';
+import AuthCard from '@/shared/components/authCard/AuthCard';
 import styles from "./authMainView.module.scss";
 
+interface IInputContainerWrapper {
+    children: React.ReactNode;
+}
 interface IWelcomeText {
     title: string;
     description: string;
@@ -100,38 +104,45 @@ const AuthMainView = (props: IAuthMainView) => {
         )
     }
 
+    const InputContainerWrapper: React.FC<IInputContainerWrapper> = ({ children }) => {
+        return (
+            <div className={styles.inputContainer}>
+                {children}
+            </div>
+        )
+    }
+
     if (authPageType == AUTH_PAGE_TYPE.SIGNUP) {
         return (
             <div className={styles.wrapper}>
-                <div className={styles.container}>
+                <AuthCard>
                     <div className={getByLayerClass[authPageType]}></div>
                     <WelcomeText
                         title='Signup page'
                         description='Lorem ipsum dolor, sit amet <br />consectetur adipisicing <br />elit. Minima commodi <br />sed do eiusmod'
                     />
-                    <div className={styles.inputContainer}>
+                    <InputContainerWrapper>
                         <Signup />
-                    </div>
-                </div>
+                    </InputContainerWrapper>
+                </AuthCard>
             </div>
         );
     }
 
-
     if (authPageType == AUTH_PAGE_TYPE.LOGIN) {
         return (
             <div className={styles.wrapper}>
-                <div className={styles.container}>
+                <AuthCard>
                     <div className={getByLayerClass[authPageType]}></div>
-                    <div className={styles.inputContainer}>
+                    <InputContainerWrapper>
                         <Login />
-                    </div>
+                    </InputContainerWrapper>
                     <WelcomeText
                         title='Login Page!'
                         description='Lorem ipsum dolor, sit amet <br />consectetur adipisicing <br />elit. Minima commodi <br />sed do eiusmod'
                         isLoginWelcome
                     />
-                </div>
+                </AuthCard>
             </div>
         );
     }
