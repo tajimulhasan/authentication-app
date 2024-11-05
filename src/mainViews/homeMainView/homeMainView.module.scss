@@ -1,0 +1,15 @@
+@import "styles/variables";
+
+.card1 {
+    width: 360px;
+    margin: 4rem auto;
+    background-color: $fill;
+    box-shadow: var(--boxShadowForMainContainer);
+    text-align: center;
+    padding: 1rem;
+}
+
+.card1 p:nth-child(1) {
+    font-size: 22px;
+    font-weight: 600;
+}

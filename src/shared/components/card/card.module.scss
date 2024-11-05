@@ -1,0 +1,25 @@
+@import "styles/variables";
+
+.card {
+    &.borderRounded {
+        border-radius: 1rem;
+    }
+
+    &.whiteBg {
+        background-color: $white;
+    }
+
+    &.fillBg {
+        background-color: $fill;
+    }
+
+    &.secondaryBg {
+        background-color: $secondary;
+        color: $white;
+    }
+
+    background-color: $fill;
+    box-shadow: var(--boxShadowForMainContainer);
+    text-align: center;
+    padding: 1rem;
+}

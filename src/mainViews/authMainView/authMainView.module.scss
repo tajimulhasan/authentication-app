@@ -1,0 +1,42 @@
+@import "/styles/variables";
+
+.wrapper {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.bgLayer,
+.bgLayerRight {
+    position: absolute;
+    background-color: $secondary;
+}
+
+.welcomeText {
+    width: 280px;
+    color: $primary;
+
+    p:nth-child(1) {
+        text-transform: uppercase;
+        font-size: 33px;
+        font-weight: 700;
+    }
+
+    &.rightAlign {
+        p {
+            text-align: end;
+        }
+    }
+}
+
+.textIndentation {
+    text-align: end;
+
+    span {
+        display: block;
+    }
+}
+
+.inputContainer {
+    width: 45%;
+}
